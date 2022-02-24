@@ -88,7 +88,7 @@ export const fieldDescriptions = {
   [FieldTypes.textArea]: "Длинный текст",
   [FieldTypes.radioGroup]: "Выбрать один вариант",
   [FieldTypes.checkGroup]: "Выбрать несколько вариантов",
-  [FieldTypes.viewImage]: "Изображение",
+  // [FieldTypes.viewImage]: "Изображение",
 };
 
 export const fieldNames = {

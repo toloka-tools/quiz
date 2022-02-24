@@ -4,11 +4,11 @@ import { Provider } from "react-redux";
 import { store } from "../app/store";
 
 export default {
-  title: "Example/Quiz",
+  title: "Quiz",
   component: Quiz,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Quiz>;
+} as ComponentMeta<typeof Quiz>
 
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Quiz> = (args) => (
@@ -17,9 +17,8 @@ const Template: ComponentStory<typeof Quiz> = (args) => (
   </Provider>
 );
 
-export const FirstStory = Template.bind({});
+export const Main = Template.bind({});
 
-FirstStory.args = {
+Main.args = {
   /*👇 The args you need here will depend on your component */
 };
-
