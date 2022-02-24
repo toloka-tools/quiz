@@ -1,5 +1,5 @@
 import { FieldCheckGroup, FieldRadioGroup } from "../types";
-import { Box, Grid, Stack, TextField, Typography } from "@mui/material";
+import { Grid, Stack, TextField, Typography } from "@mui/material";
 
 import * as Yup from "yup";
 import { useInput } from "../useInput";

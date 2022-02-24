@@ -27,7 +27,7 @@ export default function AddToken({
   open: boolean;
   setOpen: any;
 }) {
-  const { newClient, client } = useClient();
+  // const { newClient, client } = useClient();
   const [token, setToken] = useState("");
   const [type, setType] = useState(ApiType.sandbox);
   const handleClose = () => {

@@ -6,7 +6,6 @@ import {
   fieldNames,
   FieldTypes,
   UndefinedField,
-  ValTextRequired,
 } from "../types";
 import { useAppDispatch } from "../../../app/hooks";
 import { addField } from "../quizSlice";

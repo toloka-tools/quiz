@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AnyField, DataType, FieldTypes, UndefinedField } from "./types";
+import { AnyField } from "./types";
 import { arrayMoveMutable } from "array-move";
 const pointer = require("json-pointer");
 

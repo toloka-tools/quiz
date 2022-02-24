@@ -3,11 +3,10 @@ import { Box, Card, Checkbox, Grid, IconButton, Tooltip } from "@mui/material";
 import AnyInput from "./fields/AnyInput";
 import UndefinedInput from "./fields/UndefinedField";
 import { AnyField, FieldTypes, ValTextRequired } from "./types";
-import React, { useMemo } from "react";
+import React from "react";
 import { remove, reorder, setFieldValue } from "./quizSlice";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
-import { SortableContainerMaker, SortableItem } from "../SortableItem";
+import { SortableContainerMaker } from "../SortableItem";
 
 // export const DragHandle = SortableHandle(() => (
 //   <Tooltip title={"Нажмите, чтобы перенести"}>
