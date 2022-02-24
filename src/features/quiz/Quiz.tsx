@@ -21,7 +21,7 @@ const MainCard = (p: Partial<AnyField> & { id: number }) => {
   function handleRequired(e: { target: { checked: any } }) {
     dispatch(
       setFieldValue({
-        path: `/${p.id}/validation'`,
+        path: `/${p.id}/validation`,
         value: e.target.checked ? ValTextRequired : undefined,
       })
     );
