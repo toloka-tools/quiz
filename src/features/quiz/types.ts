@@ -83,11 +83,11 @@ export type AnyField =
   | UndefinedField;
 
 export const fieldDescriptions = {
-  [FieldTypes.undefined]: "Добавить поле",
-  [FieldTypes.text]: "Вопрос",
+  [FieldTypes.undefined]: "Добавить вопрос",
+  [FieldTypes.text]: "Открытый",
   // [FieldTypes.textArea]: "Вопрос",
-  [FieldTypes.radioGroup]: "Вопрос в вариантами ответа",
-  // [FieldTypes.checkGroup]: "Вопрос в вариантами ответа",
+  [FieldTypes.radioGroup]: "Возможен один вариант ответа",
+  [FieldTypes.checkGroup]: "Возможно несколько вариантов ответа",
   // [FieldTypes.viewImage]: "Изображение",
 };
 
