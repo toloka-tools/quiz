@@ -21,21 +21,16 @@ export default function InputTextField(p: { idx: number; field: FieldText }) {
     name: "label",
     validate: required,
   });
-  const id = useInput({
-    field: p.field,
-    idx: p.idx,
-    name: "path",
-    path: "data/path",
-    validate: required,
-  });
 
   return (
     <Grid container spacing={1}>
-      <Grid item xs={6} flexDirection={"row"} display={"flex"}>
-        <TextField label={"Название поля"} fullWidth {...name} />
-      </Grid>
-      <Grid item xs={6}>
-        <TextField label={"ID Поля"} fullWidth {...id} />
+      <Grid item xs={12} flexDirection={"row"} display={"flex"}>
+        <TextField
+          variant={"standard"}
+          label={"Введите вопрос"}
+          fullWidth
+          {...name}
+        />
       </Grid>
     </Grid>
   );

@@ -84,10 +84,10 @@ export type AnyField =
 
 export const fieldDescriptions = {
   [FieldTypes.undefined]: "Добавить поле",
-  [FieldTypes.text]: "Короткий текст",
-  [FieldTypes.textArea]: "Длинный текст",
-  [FieldTypes.radioGroup]: "Выбрать один вариант",
-  [FieldTypes.checkGroup]: "Выбрать несколько вариантов",
+  [FieldTypes.text]: "Вопрос",
+  // [FieldTypes.textArea]: "Вопрос",
+  [FieldTypes.radioGroup]: "Вопрос в вариантами ответа",
+  // [FieldTypes.checkGroup]: "Вопрос в вариантами ответа",
   // [FieldTypes.viewImage]: "Изображение",
 };
 
@@ -102,8 +102,8 @@ export const fieldNames = {
 
 export const fieldLabels = {
   [FieldTypes.undefined]: "undef",
-  [FieldTypes.text]: "Текстовое поле",
-  [FieldTypes.textArea]: "Длинный текст",
+  [FieldTypes.text]: "Вопрос",
+  [FieldTypes.textArea]: "Вопрос",
   [FieldTypes.radioGroup]: "Выбор ответа",
   [FieldTypes.checkGroup]: "Выбор нескольких ответов",
   [FieldTypes.viewImage]: "Изображение",

@@ -6,12 +6,22 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { clientCtx, getSavedClient } from "./features/client/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Quiz from "./features/quiz/Quiz";
+// import Auth from "./features/auth/Auth";
 
 ReactDOM.render(
   <React.StrictMode>
     <clientCtx.Provider value={getSavedClient()}>
       <Provider store={store}>
-        <App />
+        <BrowserRouter>
+          <Routes>
+            {/*<Route path={"/auth"} element={<Auth />} />*/}
+            <Route path={"/"} element={<App />}>
+              <Route path={"quiz"} element={<Quiz />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </Provider>
     </clientCtx.Provider>
   </React.StrictMode>,

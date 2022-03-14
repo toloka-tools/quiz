@@ -34,7 +34,8 @@ function UndefinedInput(p: UndefinedField) {
       dispatch(
         addField({
           type: t.target.value,
-          label: `${labelName} ${idx + 1}`,
+          // label: `${labelName} ${idx + 1}`,
+          label: ``,
           data: { type: DataType.output, path: `${fieldName}_${idx + 1}` },
         })
       );

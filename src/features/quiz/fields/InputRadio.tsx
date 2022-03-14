@@ -1,25 +1,50 @@
 import { FieldCheckGroup, FieldRadioGroup } from "../types";
-import { Grid, Stack, TextField, Typography } from "@mui/material";
+import {
+  Grid,
+  IconButton,
+  InputAdornment,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 import * as Yup from "yup";
 import { useInput } from "../useInput";
 import React, { useState } from "react";
 import { useAppDispatch } from "../../../app/hooks";
 import { setFieldValue } from "../quizSlice";
+import RemoveIcon from "@mui/icons-material/Remove";
 // import { SortableContainer, SortableElement } from "react-sortable-hoc";
 // import { DragHandle } from "../Quiz";
 
 export let required = Yup.string().required("Нужно заполнить");
 
 function InputOption(p: { handleChange: any; value: string; onBlur: any }) {
+  function handleDelete() {
+    p.handleChange({ target: { value: "" } });
+  }
   return (
     <TextField
+      variant={"standard"}
       label={"Значение"}
       name={"value"}
       value={p.value}
       onChange={p.handleChange}
       onBlur={p.onBlur}
       fullWidth
+      // InputProps={{
+      //   startAdornment: (
+      //     <InputAdornment position="start">
+      //       <IconButton
+      //         // aria-label="toggle password visibility"
+      //         onClick={handleDelete}
+      //         // onMouseDown={handleMouseDownPassword}
+      //       >
+      //         {p.value ? <RemoveIcon /> : <></>}
+      //       </IconButton>
+      //     </InputAdornment>
+      //   ),
+      // }}
     />
   );
 }
@@ -80,21 +105,16 @@ export default function InputRadio(p: {
     name: "label",
     validate: required,
   });
-  const id = useInput({
-    field: p.field,
-    idx: p.idx,
-    name: "path",
-    path: "data/path",
-    validate: required,
-  });
   const [opts, setOpts] = useState<string[]>([""]);
   return (
     <Grid container spacing={1}>
-      <Grid item xs={6} flexDirection={"row"} display={"flex"}>
-        <TextField label={"Название поля"} fullWidth {...name} />
-      </Grid>
-      <Grid item xs={6}>
-        <TextField label={"ID Поля"} fullWidth {...id} />
+      <Grid item xs={12} flexDirection={"row"} display={"flex"}>
+        <TextField
+          variant={"standard"}
+          label={"Введите вопрос"}
+          fullWidth
+          {...name}
+        />
       </Grid>
       <Grid item xs={12}>
         <Typography variant={"h5"} marginTop={2} marginBottom={1}>

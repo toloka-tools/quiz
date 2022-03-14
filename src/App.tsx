@@ -3,6 +3,7 @@ import "./App.css";
 import { Box } from "@mui/material";
 import Quiz from "./features/quiz/Quiz";
 import MainAppBar from "./features/app/MainAppBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
